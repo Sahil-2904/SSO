@@ -14,7 +14,7 @@ const Home = () => {
     const fetchUser = async () => {
       try {
         const email = user.email;
-        const response = await axios.post('http://localhost:3000/signin', {
+        const response = await axios.post('http://localhost:3001/signin', {
           email,
         });
 
@@ -39,7 +39,7 @@ const Home = () => {
     const savenote = async () => {
       const email = user.email;
       const response = await axios.post(
-        `http://localhost:3000/${email}/notes`,
+        `http://localhost:3001/${email}/notes`,
         {
           newNote:newNote
         }
@@ -64,7 +64,7 @@ const Home = () => {
     const deletenote = async () => {
       const email = user.email;
       const response = await axios.post(
-        `http://localhost:3000/${email}/noteid`,
+        `http://localhost:3001/${email}/noteid`,
         {
           ind:id
         }

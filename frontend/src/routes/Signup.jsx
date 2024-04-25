@@ -30,7 +30,7 @@ const SignUpPage = () => {
       // }
       console.log("End");
       // setData(d);
-      const response = await axios.post('http://localhost:3000/users', {
+      const response = await axios.post('http://localhost:3001/users', {
         username,
         email,
         password,

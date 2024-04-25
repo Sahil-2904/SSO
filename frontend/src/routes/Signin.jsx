@@ -15,7 +15,7 @@ const SignInPage = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log('Signed in with email:', userCredential.user);
-      const response = await axios.post('http://localhost:3000/signin', {
+      const response = await axios.post('http://localhost:3001/signin', {
         email,
         password,
       });
@@ -31,7 +31,7 @@ const SignInPage = () => {
     try {
       const user = await signInWithGoogle();
       console.log('Signed in with Google:', user);
-      const response = await axios.post('http://localhost:3000/signing', {
+      const response = await axios.post('http://localhost:3001/signing', {
         email:user.email,
         username:user.displayName,
         password:user.uid
